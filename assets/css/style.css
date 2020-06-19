@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#sky {
+    position: relative;
+    height: 70vh;
+    width: 60vw;
+    margin: 15vh 20vw;
+/*     */
+    animation: nightAndDay 10s linear infinite;
+    overflow: hidden;
+}
+
+#mountainOne {
+    position: absolute;
+    height: 48vh;
+    width: 48vh;
+    background: black;
+    z-index: 10;
+    bottom: -35%;
+    left: 20vw;
+    transform: rotate(45deg);
+}
+
+#mountainTwo {
+    position: absolute;
+    height: 30vh;
+    width: 30vh;
+    background: black;
+    z-index: 10;
+    bottom: -23%;
+    left: 9vw;
+    transform: rotate(45deg);
+}
+
+#mountainThree {
+    position: absolute;
+    height: 25vh;
+    width: 25vh;
+    background: black;
+    z-index: 10;
+    bottom: -22%;
+    left: 37vw;
+    transform: rotate(45deg);
+}
+
+#sun {
+    position: absolute;
+    height: 10vh;
+    width: 10vh;
+    background: whitesmoke;
+    border-radius: 50%;
+    left: 25vw;
+    bottom: -5vh;
+    animation: sunSetAndRise 10s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes sunSetAndRise {
+    from { transform: rotate(0deg) translateX(20vw) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(20vw) rotate(-360deg); }
+}
+
+@keyframes nightAndDay {
+    0%, 100% {
+        background: #D88090;
+    }
+
+    25% {
+        background: black;
+    }
+
+    50% {
+        background: rgb(253, 216, 164);
+    }
+
+    75% {
+        background: rgb(140, 186, 233);
+    }
+
+}
