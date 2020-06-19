@@ -105,8 +105,8 @@
     filter: drop-shadow(0 0 1rem #fffb9f);
 }
 @keyframes sunSetAndRise {
-    from { transform: rotate(0deg) translateX(20vw) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(20vw) rotate(-360deg); }
+    from { transform: rotate(0deg) translateX(25vw) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(25vw) rotate(-360deg); }
 }
 
 /* The moon and its' animations */
