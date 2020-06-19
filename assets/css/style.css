@@ -19,7 +19,7 @@
     }
 
     25% {
-        background: black;
+        background: #111111;
     }
 
     50% {
@@ -65,6 +65,30 @@
     bottom: -22%;
     left: 37vw;
     transform: rotate(45deg);
+}
+
+/* Mountain responsivity */
+@media screen and (max-aspect-ratio: 1/1) {
+    #mountainOne {
+        height: 48%;
+        width: 48%;
+        bottom: -38%;
+        left: -22%;
+    }
+
+    #mountainTwo {
+        height: 30vh;
+        width: 30vh;
+        bottom: -33%;
+        left: 9%;
+    }
+
+    #mountainThree {
+        height: 25vh;
+        width: 25vh;
+        bottom: -30%;
+        left: 42%;
+    }
 }
 /* The sun and its' animations */
 
@@ -143,6 +167,127 @@
 
     24%, 26% {
         top: 20vh;
+    }
+}
+
+/* Starry sky */
+#stars {
+    position: relative;
+    animation: starLight 10s infinite linear;
+}
+
+#starColOne, 
+#starColTwo {
+    width: 20%;
+    height: 100%;
+    position: absolute
+}
+
+#starColTwo {
+    transform: rotate(170deg);
+    top: -79%;
+    left: 72%;
+}
+
+.starRow {
+    position: relative;
+}
+
+.starRowTwo {
+    left: 100%;
+    top: 10%;
+    transform: rotate(60deg);
+}
+
+.starRowThree {
+    left: 200%; 
+    top: 30%;
+    transform: rotate(170deg);
+}
+
+.starRowFour {
+    left: 300%;
+    transform: rotate(-60deg);
+    top: 10%;
+}
+
+.starRowFive {
+    left: 400%;
+    top: 20%;
+    transform: rotate(100deg);
+}
+
+/* Individual stars */
+.starOne {
+    position: absolute;
+    height: 1vh;
+    width: 1vh;
+    border-radius: 50%;
+    background: white;
+    top: 2vh;
+}
+
+.starTwo {
+    position: absolute;
+    height: 0.5vh;
+    width: 0.5vh;
+    border-radius: 50%;
+    background: white;
+    top: 6vh;
+    left: 10%;
+}
+
+.starThree {
+    position: absolute;
+    height: 0.75vh;
+    width: 0.75vh;
+    border-radius: 50%;
+    background: white;
+    top: 3vh;
+    left: 60%;
+}
+
+.starFour {
+    position: absolute;
+    height: 1vh;
+    width: 1vh;
+    border-radius: 50%;
+    background: white;
+    top: 12vh;
+    left: 85%;
+}
+
+.starFive {
+    position: absolute;
+    height: 0.5vh;
+    width: 0.5vh;
+    border-radius: 50%;
+    background: white;
+    top: 1vh;
+    left: 95%;
+}
+
+.starSix {
+    position: absolute;
+    height: 0.6vh;
+    width: 0.6vh;
+    border-radius: 50%;
+    background: white;
+    top: 7vh;
+    left: 26%;
+}
+
+
+/* Star animation */
+@keyframes starLight {
+    0%, 45%, 100% {
+        opacity: 0%;
+        filter: drop-shadow(0 0 0 white);
+    }
+
+    18%, 25% {
+        opacity: 30%;
+        filter: drop-shadow(0 0 0.3rem white);
     }
 }
 
