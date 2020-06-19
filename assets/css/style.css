@@ -67,6 +67,7 @@
     transform: rotate(45deg);
 }
 /* The sun and its' animations */
+
 #sun {
     position: absolute;
     height: 10vh;
@@ -79,13 +80,71 @@
     animation-timing-function: linear;
     filter: drop-shadow(0 0 1rem #fffb9f);
 }
-
 @keyframes sunSetAndRise {
     from { transform: rotate(0deg) translateX(20vw) rotate(0deg); }
     to   { transform: rotate(360deg) translateX(20vw) rotate(-360deg); }
 }
 
+/* The moon and its' animations */
+#moon {
+    z-index: 200;
+    position: absolute;
+    height: 10vh;
+    width: 10vh;
+    background: #afafaf;
+    border-radius: 50%;
+    right: 5vw;
+    filter: drop-shadow(0 0 1rem #fbfbfb);
+    animation: moonDrop 10s infinite;
+}
 
+#craterOne {
+    z-index: 201;
+    position: relative;
+    border: solid 2px #888888;
+    border-bottom: none;
+    height: 4vh;
+    width: 4vh;
+    border-radius: 50%;
+    left: 45%;
+    top: 15%;
+}
+
+#craterTwo {
+    z-index: 201;
+    position: relative;
+    border: solid 2px #888888;
+    border-left: none;
+    border-top: solid 1px;
+    height: 3vh;
+    width: 3vh;
+    border-radius: 50%;
+    left: 55%;
+    top: 10%;
+}
+
+#craterThree {
+    z-index: 201;
+    position: relative;
+    border: solid 1px #888888;
+    border-left: none;
+    border-top: solid 1px;
+    height: 2vh;
+    width: 2vh;
+    border-radius: 50%;
+    left: 35%;
+    top: 5%;
+}
+
+@keyframes moonDrop {
+    0%, 15%, 35%, 100% {
+        top: -20vh;
+    }
+
+    24%, 26% {
+        top: 20vh;
+    }
+}
 
 /* Cloud formation */
 .cloud {
