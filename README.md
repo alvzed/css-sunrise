@@ -1,1 +1,1 @@
-#A small animation I made with CSS.
+## A small animation I made with CSS.
